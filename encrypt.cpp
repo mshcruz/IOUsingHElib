@@ -62,9 +62,7 @@ int main(int argc, char **argv)
 	// Output ciphertext to file
 	std::fstream ciphertext("ciphertext.txt", fstream::out|fstream::trunc);
 	assert(ciphertextFile.is_open());
-	if (ciphertext.is_open()) {
-		ciphertext << ctxt;
-	}
+	ciphertext << ctxt;
 	ciphertext.close();
 
 	return 0;
